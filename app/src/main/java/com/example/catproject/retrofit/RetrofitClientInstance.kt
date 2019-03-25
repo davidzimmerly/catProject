@@ -17,8 +17,9 @@ object RetrofitClientInstance {
                         .connectTimeout(5, TimeUnit.MINUTES)
                         .readTimeout(5, TimeUnit.MINUTES)
                         .writeTimeout(5, TimeUnit.MINUTES)
-                        .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)).build())
-                        .addConverterFactory(GsonConverterFactory.create())
+                        .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+                        .build())
+                    .addConverterFactory(GsonConverterFactory.create())
                     .build()
         }
         return retrofit
