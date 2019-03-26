@@ -27,9 +27,9 @@ class BreedAdapter(private val context: Context, private var breeds:List<Breed>)
     override fun onBindViewHolder(holder: BreedViewHolder, position: Int) {
         val breed:Breed = breeds[position]
         holder.itemView.tvBreedName.text = breed.name
-        holder.itemView.tvBreedDesc.text = breed.description
-        holder.itemView.tvBreedTemp.text = "Temperament = ${breed.temperament}"
-        holder.itemView.tvBreedOrigin.text = "Origin = ${breed.origin}"
+        holder.itemView.tvDesc.text = breed.description
+        /*holder.itemView.tvBreedTemp.text = "Temperament = ${breed.temperament}"
+        holder.itemView.tvBreedOrigin.text = "Origin = ${breed.origin}"*/
     }
 
     class BreedViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)

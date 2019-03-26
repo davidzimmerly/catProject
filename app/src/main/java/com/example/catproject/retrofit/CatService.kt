@@ -15,6 +15,6 @@ interface CatService {
     fun loadBreeds(@Query("limit") limit:Int) : Call<List<Breed>>
 
     @GET(IMAGES_SEARCH_PATH)
-    fun getBreedImage(@Query("breed_id") breedID:String): Call<List<BreedImage>>
+    fun getBreedImage(@Query("limit=1breed_id") breedID:String): Call<List<BreedImage>>
 
 }

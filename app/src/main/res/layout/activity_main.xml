@@ -7,21 +7,80 @@
         android:layout_height="match_parent"
         android:background="@android:color/holo_blue_dark"
         tools:context=".MainActivity"
+        android:padding="16dp"
+        android:clipToPadding="false"
         >
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="20dp"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/cardMainLayout"
+            android:layout_marginTop="2dp"
+
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/cardMainLayout"
+            app:layout_constraintStart_toStartOf="@+id/cardMainLayout"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintVertical_bias="0.19999999"/>
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myRecyclerView"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="269dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:padding="16dp"
-            android:clipToPadding="false"/>
+            android:clipToPadding="false"
+            app:layout_constraintHeight_percent=".5"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardMainLayout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/cardMainLayout"
+            app:layout_constraintStart_toStartOf="@+id/cardMainLayout"
+            android:layout_marginBottom="2dp"
+            android:elevation="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardMainLayout"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/ourCardColor1"
+            android:visibility="invisible"
+            android:id="@+id/cardMainLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/myRecyclerView"
+            app:layout_constraintVertical_bias="1.0"
+            android:padding="8dp"
+            app:cardElevation="12dp"
+            app:strokeColor="@color/design_default_color_primary"
+            app:strokeWidth="1dp"
+            android:clipToPadding="false"
+            >
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

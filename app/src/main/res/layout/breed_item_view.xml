@@ -1,61 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:card_view="http://schemas.android.com/apk/res-auto"
                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="wrap_content"
-                                                   app:strokeColor="@color/colorAccent"
+                                                   app:strokeColor="@color/design_default_color_primary"
                                                    app:strokeWidth="1dp"
                                                    app:cardElevation="12dp"
+
                                                    android:backgroundTint="@color/ourCardColor1"
                                                    app:cardCornerRadius="4dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        >
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp"
-            android:clipToPadding="false">
+            android:padding="2dp"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:onClick="breedClick">
 
         <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvBreedName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="22sp"
-                android:padding="10dp"
+                android:textSize="15sp"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textStyle="bold"/>
-
+                android:textStyle="bold"
+                />
         <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvBreedDesc"
+                android:id="@+id/tvDesc"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvBreedName" />
-        <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvBreedTemp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvBreedDesc" />
-        <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvBreedOrigin"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvBreedTemp" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
